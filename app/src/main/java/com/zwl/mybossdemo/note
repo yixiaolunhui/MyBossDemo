@@ -1,0 +1,6 @@
+设置显示时的高度问题
+打开 BottomSheetDialog 的 setContentView() ->wrapInBottomSheet()
+
+可以看到 BottomSheetDialog 中用到了 BottomSheetBehavior ，并且该 Behavior 是通过
+id 为 design_bottom_sheet 的 View 来获取的。也就是说我们只要获取到这个 View 就可以调用
+BottomSheetBehavior 的 setPeekHeight() 方法来设置 BottomSheetDialog 显示时的高度了。

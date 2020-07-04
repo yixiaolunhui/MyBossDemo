@@ -1,4 +1,4 @@
-package com.zwl.mybossdemo;
+package com.zwl.mybossdemo.behavior;
 
 import android.animation.ValueAnimator;
 import android.content.Context;
@@ -8,6 +8,7 @@ import android.view.View;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 
 import com.google.android.material.appbar.AppBarLayout;
+import com.zwl.mybossdemo.R;
 
 /**
  * 上滑时
@@ -31,7 +32,6 @@ public class AppBarLayoutOverScrollViewBehavior extends AppBarLayout.Behavior {
     private int mLastBottom;
     private int mCardViewHeight;
     private int mLimitHeight;
-    private ValueAnimator recoveryValueAnimator;
     private View mToolBar;
     private float scaleValue = 2f / 3;// 显示卡片的三分之一 所以抛出三分之二
     private View mNameTitle;
@@ -182,8 +182,8 @@ public class AppBarLayoutOverScrollViewBehavior extends AppBarLayout.Behavior {
         if (mTotalDy >= 0) {
             mTotalDy = 0;
             if (isAnimate) {
-                recoveryValueAnimator = ValueAnimator.ofFloat(0, 1f).setDuration(200);
-                recoveryValueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+                ValueAnimator valueAnimator = ValueAnimator.ofFloat(0, 1f).setDuration(200);
+                valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
                     @Override
                     public void onAnimationUpdate(ValueAnimator animation) {
                         float value = (float) animation.getAnimatedValue();
@@ -192,7 +192,7 @@ public class AppBarLayoutOverScrollViewBehavior extends AppBarLayout.Behavior {
                         abl.setScrollY(0);
                     }
                 });
-                recoveryValueAnimator.start();
+                valueAnimator.start();
             } else {
                 abl.setBottom(mLimitHeight);
                 abl.setScrollY(0);
