@@ -18,7 +18,7 @@ import com.zwl.mybossdemo.R;
  * 1、增加了设置显示高度跟最大高度的方法
  * 2、修复了通过手势关闭后无法再显示的问题
  */
-public class StrongBottomSheetDialog extends BottomSheetDialog {
+public class CommonBottomSheetDialog extends BottomSheetDialog {
 
     private int mPeekHeight;
     private int mMaxHeight;
@@ -26,24 +26,23 @@ public class StrongBottomSheetDialog extends BottomSheetDialog {
     private Window mWindow;
     private BottomSheetBehavior mBottomSheetBehavior;
 
-    public StrongBottomSheetDialog(@NonNull Context context) {
+    public CommonBottomSheetDialog(@NonNull Context context) {
         super(context);
         mWindow = getWindow();
     }
 
-    public StrongBottomSheetDialog(@NonNull Context context, int peekHeight, int maxHeight) {
+    public CommonBottomSheetDialog(@NonNull Context context, int peekHeight, int maxHeight) {
         this(context);
         mPeekHeight = peekHeight;
         mMaxHeight = maxHeight;
     }
 
-    public StrongBottomSheetDialog(@NonNull Context context, @StyleRes int theme) {
+    public CommonBottomSheetDialog(@NonNull Context context, @StyleRes int theme) {
         super(context, theme);
         mWindow = getWindow();
     }
 
-    public StrongBottomSheetDialog(@NonNull Context context, boolean cancelable,
-                                   OnCancelListener cancelListener) {
+    public CommonBottomSheetDialog(@NonNull Context context, boolean cancelable, OnCancelListener cancelListener) {
         super(context, cancelable, cancelListener);
     }
 
@@ -58,17 +57,23 @@ public class StrongBottomSheetDialog extends BottomSheetDialog {
         setBottomSheetCallback();
     }
 
+    /**
+     * 显示高度
+     * @param peekHeight
+     */
     public void setPeekHeight(int peekHeight) {
         mPeekHeight = peekHeight;
-
         if (mCreated) {
             setPeekHeight();
         }
     }
 
+    /**
+     * 设置最大高度
+     * @param height
+     */
     public void setMaxHeight(int height) {
         mMaxHeight = height;
-
         if (mCreated) {
             setMaxHeight();
         }
@@ -119,8 +124,7 @@ public class StrongBottomSheetDialog extends BottomSheetDialog {
         }
     }
 
-    private final BottomSheetBehavior.BottomSheetCallback mBottomSheetCallback
-            = new BottomSheetBehavior.BottomSheetCallback() {
+    private final BottomSheetBehavior.BottomSheetCallback mBottomSheetCallback = new BottomSheetBehavior.BottomSheetCallback() {
         @Override
         public void onStateChanged(@NonNull View bottomSheet,
                                    @BottomSheetBehavior.State int newState) {
