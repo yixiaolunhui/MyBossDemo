@@ -4,16 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
     android:orientation="vertical">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:fitsSystemWindows="true"
-        android:layout_height="?attr/actionBarSize"
+        android:layout_height="wrap_content"
         android:background="#243233"
-        app:theme="@style/ThemeOverlay.AppCompat.Dark" />
+        android:fitsSystemWindows="true"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark"
+        />
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -39,7 +39,7 @@
             android:layout_height="match_parent">
 
 
-            <androidx.core.widget.NestedScrollView
+            <FrameLayout
                 android:id="@+id/boss_bottom_sheet"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -62,18 +62,22 @@
                         android:scaleType="fitXY"
                         android:src="@drawable/boss_company_detail_bottom_top" />
 
-                    <ImageView
+                    <androidx.core.widget.NestedScrollView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:adjustViewBounds="true"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/boss_company_detail_bottom" />
+                        android:layout_height="match_parent">
 
 
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/boss_company_detail_bottom" />
+
+                    </androidx.core.widget.NestedScrollView>
                 </LinearLayout>
 
-
-            </androidx.core.widget.NestedScrollView>
+            </FrameLayout>
 
         </androidx.coordinatorlayout.widget.CoordinatorLayout>
     </FrameLayout>

@@ -6,7 +6,6 @@
     android:orientation="vertical"
     android:paddingTop="40dp">
 
-
     <RelativeLayout
         android:id="@+id/top_view_id"
         android:layout_width="match_parent"
@@ -80,20 +79,6 @@
             android:textColor="@android:color/white"
             android:textSize="16sp" />
 
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:id="@+id/cardview"
-        android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:layout_gravity="center_horizontal"
-        android:gravity="center_horizontal|bottom">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/boss_card_bg" />
     </LinearLayout>
 
 </LinearLayout>

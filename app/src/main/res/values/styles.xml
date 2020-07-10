@@ -13,7 +13,6 @@
         <item name="colorPrimary">#243233</item>
         <item name="colorPrimaryDark">#243233</item>
         <item name="colorAccent">#243233</item>
-        <item name="android:windowFullscreen">true</item>
     </style>
 
 </resources>
