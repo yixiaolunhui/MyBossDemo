@@ -110,6 +110,7 @@ public class TagFlowLayout extends FlowLayout implements TagFlowAdapter.OnDataCh
      * @return
      */
     public TagFlowContainer getViewByTag(Object o) {
+        if (o == null) return null;
         int count = tagAdapter.getCount();
         for (int i = 0; i < count; i++) {
             TagFlowContainer childAt = (TagFlowContainer) getChildAt(i);
@@ -164,10 +165,13 @@ public class TagFlowLayout extends FlowLayout implements TagFlowAdapter.OnDataCh
                 }
                 //之前是未选中状态
                 else {
+                    //如果是点击了互斥的
                     if (isMutex) {
                         tagAdapter.removeAllChecked();//清空选中的集合
                         clearAllCheckedState();//清空所有view上的状态
-                    } else {
+                    }
+                    //点击的不是互斥的
+                    else {
                         setMutexTagFlowView(false);
                     }
                     tagAdapter.addChecked(tagAdapter.isCheckContent(tagAdapter.getItem(position), position));
@@ -256,12 +260,13 @@ public class TagFlowLayout extends FlowLayout implements TagFlowAdapter.OnDataCh
 
     /**
      * 去掉设置的互斥数据
+     *
      * @return
      */
     public List getCheckedItemsFilter() {
         ArrayList items = new ArrayList();
         for (int i = 0; i < tagAdapter.getCount(); i++) {
-            if (tagAdapter.isCheckContent(tagAdapter.getItem(i), i)!=tagAdapter.getMutexCheck()&&
+            if (tagAdapter.isCheckContent(tagAdapter.getItem(i), i) != tagAdapter.getMutexCheck() &&
                     tagAdapter.isChecked(tagAdapter.isCheckContent(tagAdapter.getItem(i), i))) {
                 items.add(tagAdapter.getItem(i));
             }

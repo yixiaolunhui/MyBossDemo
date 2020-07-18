@@ -2,12 +2,19 @@
 <resources>
     <!-- 流布局-->
     <declare-styleable name="FlowLayout">
+        <!--支持折叠 -->
         <attr name="flow_fold" format="boolean" />
+        <!--折叠时的行数（支持折叠情况下） -->
         <attr name="flow_foldLines" format="integer" />
+        <!--平均分配 -->
         <attr name="flow_equally" format="boolean" />
+        <!--平局分配一行的数量 -->
         <attr name="flow_equally_count" format="integer" />
+        <!--水平间距 -->
         <attr name="flow_horizontalSpacing" format="dimension" />
+        <!--竖直间距 -->
         <attr name="flow_verticalSpacing" format="dimension" />
+        <!--左右对齐 -->
         <attr name="flow_gravity">
             <enum name="LEFT" value="0"></enum>
             <enum name="RIGHT" value="1"></enum>

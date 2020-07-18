@@ -116,7 +116,7 @@ public abstract class TagFlowAdapter<T, S> {
     }
 
     /**
-     * 获取互斥数据
+     * 获取互斥（不限）数据
      * @return
      */
     public S getMutexCheck() {
