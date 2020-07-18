@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 流布局-->
+    <declare-styleable name="FlowLayout">
+        <attr name="flow_fold" format="boolean" />
+        <attr name="flow_foldLines" format="integer" />
+        <attr name="flow_equally" format="boolean" />
+        <attr name="flow_equally_count" format="integer" />
+        <attr name="flow_horizontalSpacing" format="dimension" />
+        <attr name="flow_verticalSpacing" format="dimension" />
+        <attr name="flow_gravity">
+            <enum name="LEFT" value="0"></enum>
+            <enum name="RIGHT" value="1"></enum>
+        </attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="TagFlowLayout">
+        <!--标签模式-->
+        <attr name="flow_mode" format="enum">
+            <!--展示模式-->
+            <enum name="flow_show" value="0" />
+            <!--单选模式-->
+            <enum name="flow_single" value="1" />
+            <!--多选模式-->
+            <enum name="flow_multiple" value="2" />
+        </attr>
+    </declare-styleable>
+</resources>

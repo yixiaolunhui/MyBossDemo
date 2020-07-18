@@ -7,19 +7,26 @@
 
 
     <Button
-        android:text="仿BOSS我的界面"
-        android:onClick="minePage"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:onClick="minePage"
+        android:text="仿BOSS我的界面" />
 
     <Button
-        android:text="仿BOSS公司详情"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:onClick="companyDetail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:text="仿BOSS公司详情" />
+
     <Button
-        android:text="仿BOSS中弹出框"
-        android:onClick="commonDialog"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:onClick="commonDialog"
+        android:text="仿BOSS中弹出框" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="filter"
+        android:text="仿BOSS筛选界面" />
 </LinearLayout>

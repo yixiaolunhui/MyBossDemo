@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorAccent"
-        app:layout_behavior="com.zwl.mybossdemo.behavior.AppBarLayoutOverScrollViewBehavior">
+        app:layout_behavior=".mine.behavior.AppBarLayoutOverScrollViewBehavior">
 
 
         <com.google.android.material.appbar.CollapsingToolbarLayout

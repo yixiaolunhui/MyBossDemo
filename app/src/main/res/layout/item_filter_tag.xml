@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_iv"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@drawable/tag_bg_tag"
+    android:ellipsize="end"
+    android:gravity="left"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:singleLine="true"
+    android:textColor="@drawable/tag_textcolor" />

@@ -9,10 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".filter.FilterActivity" />
         <activity
-            android:name=".BossCompanyDetailActivity"
+            android:name=".company.BossCompanyDetailActivity"
             android:theme="@style/BossCompanyAppTheme" />
-        <activity android:name=".BossMineActivity" />
+        <activity android:name=".mine.BossMineActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

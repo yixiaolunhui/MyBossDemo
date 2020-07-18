@@ -7,7 +7,10 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.zwl.mybossdemo.company.BossCompanyDetailActivity;
 import com.zwl.mybossdemo.dialog.CommonBottomSheetDialog;
+import com.zwl.mybossdemo.filter.FilterActivity;
+import com.zwl.mybossdemo.mine.BossMineActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,14 +22,31 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * 我的界面
+     *
+     * @param view
+     */
     public void minePage(View view) {
         startActivity(new Intent(this, BossMineActivity.class));
     }
 
+
+    /**
+     * 公司详情
+     *
+     * @param view
+     */
     public void companyDetail(View view) {
         startActivity(new Intent(this, BossCompanyDetailActivity.class));
     }
 
+
+    /**
+     * 弹出框（分享，待遇等）
+     *
+     * @param view
+     */
     public void commonDialog(View view) {
         View content = LayoutInflater.from(this).inflate(R.layout.dialog_view, null);
 
@@ -46,4 +66,12 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * 筛选界面
+     *
+     * @param view
+     */
+    public void filter(View view) {
+        startActivity(new Intent(this, FilterActivity.class));
+    }
 }
